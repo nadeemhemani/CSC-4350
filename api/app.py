@@ -18,6 +18,8 @@ from resources.food import FoodList
 from resources.food import FoodImageUploader
 from resources.food import FoodImageDownloader
 
+from resources.consumer import Consumer
+
 app = Flask(__name__)
 app.config.from_object('config')
 
@@ -45,6 +47,8 @@ api.add_resource(Food, '/food/<string:_id>/<string:store>')
 api.add_resource(FoodList, '/foods/<string:store>')
 api.add_resource(FoodImageUploader, '/food/photo/upload')
 api.add_resource(FoodImageDownloader, '/food/photo/download/<string:food_id>')
+
+api.add_resource(Consumer, '/consumer/<string:lat>/<string:lng>/<string:unit>')
 
 if __name__ == '__main__':
     app.run(debug=True)    
