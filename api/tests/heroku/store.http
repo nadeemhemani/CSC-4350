@@ -1,0 +1,36 @@
+# add store
+POST https://team-um6.herokuapp.com/store
+Content-Type: application/json
+
+{
+    "name"     : "Walmart",
+    "phone"    : "(800)999-9999-3939",
+    "street"   : "2395 Peachtree Pkwy",
+    "city"     : "Cumming",
+    "state"    : "Georgia",
+    "zipcode"  : 30041,
+    "open"     : "09:00:00",
+    "close"    : "23:00:00"
+}
+
+# get store
+GET https://team-um6.herokuapp.com/store/1 HTTP/1.1
+Content-Type: application/json
+
+# change store
+PUT https://team-um6.herokuapp.com/store/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name" : "Super Walmart"
+}
+
+
+# delete store
+DELETE https://team-um6.herokuapp.com/store/1 HTTP/1.1
+Content-Type: application/json
+
+
+# list all stores
+GET https://team-um6.herokuapp.com/stores HTTP/1.1
+Content-Type: application/json

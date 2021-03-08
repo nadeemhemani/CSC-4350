@@ -10,8 +10,8 @@ class StoreModel(db.Model):
     city = db.Column(db.String)
     state = db.Column(db.String)
     zipcode = db.Column(db.Integer)
-    lat = db.Column(db.Integer)
-    lng = db.Column(db.Integer)
+    lat = db.Column(db.Float)
+    lng = db.Column(db.Float)
     open_at = db.Column(db.DateTime)
     close_at = db.Column(db.DateTime)
                  
