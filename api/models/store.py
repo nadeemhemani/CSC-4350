@@ -16,6 +16,7 @@ class StoreModel(db.Model):
     close_at = db.Column(db.DateTime)
                  
     users = db.relationship('UserModel')
+    foods = db.relationship('FoodModel')
 
     def __init__(self, name, phone, street, city, state, zipcode, lat, lng, open_at, close_at):
         self.name = name

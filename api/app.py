@@ -12,6 +12,11 @@ from security import authenticate, identity
 from resources.user import User
 from resources.user import UserList
 
+from resources.food import FoodAPI
+from resources.food import Food
+from resources.food import FoodList
+from resources.food import FoodImageUploader
+from resources.food import FoodImageDownloader
 
 app = Flask(__name__)
 app.config.from_object('config')
@@ -35,7 +40,11 @@ api.add_resource(User, '/register')
 api.add_resource(User, '/user/<string:store>/<string:email>')
 api.add_resource(UserList, '/users/<string:store>')
 
-
+api.add_resource(FoodAPI, '/food')
+api.add_resource(Food, '/food/<string:_id>/<string:store>')
+api.add_resource(FoodList, '/foods/<string:store>')
+api.add_resource(FoodImageUploader, '/food/photo/upload')
+api.add_resource(FoodImageDownloader, '/food/photo/download/<string:food_id>')
 
 if __name__ == '__main__':
     app.run(debug=True)    

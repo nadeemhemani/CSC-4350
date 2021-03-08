@@ -83,16 +83,19 @@ class Store(Resource):
             payload = parser.parse_args()
 
             if payload.get('name') is not None: store.name = payload['name']
-            if payload.get('phone') is not None: store.name = payload['phone']
-            if payload.get('street') is not None: store.name = payload['street']
-            if payload.get('city') is not None: store.name = payload['city']
-            if payload.get('state') is not None: store.name = payload['state']
-            if payload.get('zipcode') is not None: store.name = payload['zipcode']
+            if payload.get('phone') is not None: store.phone = payload['phone']
+            if payload.get('street') is not None: store.street = payload['street']
+            if payload.get('city') is not None: store.city = payload['city']
+            if payload.get('state') is not None: store.state = payload['state']
+            if payload.get('zipcode') is not None: store.zipcode = payload['zipcode']
             if payload.get('open') is not None: store.open = datetime.datetime.strptime(payload['open'], '%H:%M:%S')
-            if payload.get('close') is not None: store.open = datetime.datetime.strptime(payload['close'], '%H:%M:%S')
+            if payload.get('close') is not None: store.close = datetime.datetime.strptime(payload['close'], '%H:%M:%S')
             
             if ((payload.get('street') is not None) and (payload.get('city') is not None) and (payload.get('state') is not None) and (payload.get('zipcode') is not None)):
                 lat, lng = GeoMapping.get_coordinates(payload['street'], payload['city'], payload['state'], payload['zipcode'])
+
+                store.lat = lat
+                store.lng = lng
             
             store.save()
 
