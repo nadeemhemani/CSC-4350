@@ -5,7 +5,7 @@ Content-Type: application/json
 {
     "password"   : "harvest",
     "email"      : "team-um6@gsu.edu", 
-    "store"      : 1
+    "store"      : 2
 }
 
 # authenticate
@@ -47,6 +47,6 @@ Content-Type: application/json
 
 
 # List users
-GET http://localhost:5000/users/1 HTTP/1.1
+GET http://localhost:5000/users/2 HTTP/1.1
 Content-Type: application/json
-Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTUxNDQ3ODQsImlhdCI6MTYxNTE0Mjk4NCwibmJmIjoxNjE1MTQyOTg0LCJpZGVudGl0eSI6MX0.RscoSDUAY4RRELjeMkItp3LxSxaV8RMTHoShWuJsThI
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTU0MDE2NzEsImlhdCI6MTYxNTM5OTg3MSwibmJmIjoxNjE1Mzk5ODcxLCJpZGVudGl0eSI6MX0.HlnPRxv8qJewkMPb1JF6Muz-wx8KItpKWFZ9OZVVhco

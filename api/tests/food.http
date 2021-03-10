@@ -6,7 +6,7 @@ Content-Type: application/json
     "name"       : "Bread",
     "quantity"   : 1,
     "calories"   : 100,
-    "expiration" : "03/10/2021",
+    "expiration" : "04/10/2021",
     "store"      : 1
 }
 

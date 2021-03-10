@@ -39,6 +39,7 @@ class StoreModel(db.Model):
             'city'      : self.city,
             'state'     : self.state, 
             'zipcode'   : self.zipcode, 
+            'phone'     : self.phone,
             'latitude'  : self.lat,
             'longitude' : self.lng,
             'open at'   : f'{str(self.open_at.hour).zfill(2)}:{str(self.open_at.minute).zfill(2)}',
