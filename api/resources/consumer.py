@@ -34,7 +34,7 @@ class Consumer(Resource):
                     'zipcode'         : s.zipcode,
                     'zipcode'         : s.zipcode,
                     'latitude'        : s.lat, 
-                    'longiture'       : s.lng,
+                    'longitude'       : s.lng,
                     'open at'         : f'{str(s.open_at.hour).zfill(2)}:{str(s.open_at.minute).zfill(2)}',
                     'close at'        : f'{str(s.close_at.hour).zfill(2)}:{str(s.close_at.minute).zfill(2)}',
                     'items available' : 1,
