@@ -41,6 +41,8 @@ class Consumer(Resource):
                     'distance'        : f'{distance}',
                 }
 
-        return {'stores' : stores}, 201
+        
+
+        return {'stores' : [store for store in stores.values()]}, 201
         
 
