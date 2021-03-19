@@ -17,6 +17,7 @@ requests = "*"
 geocoder = "*"
 geopy = "*"
 psycopg2 = "*"
+mysqlclient = "*"
 
 [requires]
 python_version = "3.7"

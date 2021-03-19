@@ -114,7 +114,7 @@ Content-Type: application/json
     "quantity"   : 1,
     "calories"   : 100,
     "expiration" : "04/10/2021",
-    "store"      : 1
+    "store"      : 3
 }
 
 POST https://team-um6.herokuapp.com/food

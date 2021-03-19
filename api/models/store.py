@@ -4,11 +4,11 @@ class StoreModel(db.Model):
     __tablename__ = 'stores'
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String)
-    phone = db.Column(db.String)
-    street = db.Column(db.String)
-    city = db.Column(db.String)
-    state = db.Column(db.String)
+    name = db.Column(db.String(60))
+    phone = db.Column(db.String(30))
+    street = db.Column(db.String(120))
+    city = db.Column(db.String(60))
+    state = db.Column(db.String(60))
     zipcode = db.Column(db.Integer)
     lat = db.Column(db.Float)
     lng = db.Column(db.Float)

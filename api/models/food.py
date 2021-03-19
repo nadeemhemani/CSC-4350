@@ -4,11 +4,11 @@ class FoodModel(db.Model):
     __tablename__ = 'foods'
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String)
+    name = db.Column(db.String(60))
     quantity = db.Column(db.Integer)
     calories = db.Column(db.Integer)
     expiration = db.Column(db.DateTime)
-    photo = db.Column(db.String)
+    photo = db.Column(db.String(255))
     store_id = db.Column(db.Integer, db.ForeignKey('stores.id'))
 
     def __init__(self, name, quantity, calories, expiration, store_id):
