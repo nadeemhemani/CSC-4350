@@ -4,7 +4,11 @@ from datetime import timedelta
 PROPAGATE_EXCEPTIONS = True
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 SQLALCHEMY_ECHO = False
+
+# SQLite
 SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL', 'sqlite:///harvest.db')
+# MySQL
+#SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL', 'mysql://php:php@localhost/app')
 
 MAPQUEST_API_KEY = os.environ.get('MAPQUEST_API_KEY', 'EoZti5KeH2Ce7rmBmnCgJVvIMARHmdpc')
 
