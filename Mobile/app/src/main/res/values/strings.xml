@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Harvest (Prototype)</string>
+    <string name="title_activity_maps">Harvest</string>
+    <string name="google_maps_api">AIzaSyB9uY_bPdqlKgzhVVJZTY-fUqULp-0-66A</string>
+    <string name="brown">#C9A47E</string>
+    <string name="red">#AC340C</string>
+    <string name="Cream">#F6FAF0</string>
+    <string name="light_beige">#EDD59F</string>
+    <string name="Light_pink">#FBCCAE</string>
+    <string name="light_green">#7FAA6F</string>
+
+</resources>
