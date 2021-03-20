@@ -1,0 +1,22 @@
+# 1. User Login (invalid username / password)
+POST https://team-um6.herokuapp.com/auth
+Content-Type: application/json
+
+{
+    "email"    : "team-um6@gsu.edu",
+    "password" : "harvest123"
+}
+
+# 2. User Login (successful)
+POST https://team-um6.herokuapp.com/auth
+Content-Type: application/json
+
+{
+    "email"    : "team-um6@gsu.edu",
+    "password" : "harvest"
+}
+
+# 3. List users for a specific store (users needs to be logged in)
+GET https://team-um6.herokuapp.com/users/10 HTTP/1.1
+Content-Type: application/json
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTYyNjMzMjUsImlhdCI6MTYxNjI2MTUyNSwibmJmIjoxNjE2MjYxNTI1LCJpZGVudGl0eSI6MX0.dpHYbdHQzVC2Srl4xTPJMF0-7zMV2uR4NtfMuzBeSsA
