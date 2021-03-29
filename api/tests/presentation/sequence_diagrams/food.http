@@ -1,0 +1,46 @@
+# add food
+POST https://team-um6.herokuapp.com/food
+Content-Type: application/json
+
+{
+    "name"       : "Bread",
+    "quantity"   : 1,
+    "calories"   : 100,
+    "expiration" : "04/10/2021",
+    "store"      : 1
+}
+
+# add expired food
+POST https://team-um6.herokuapp.com/food
+Content-Type: application/json
+
+{
+    "name"       : "Tomato",
+    "quantity"   : 1,
+    "calories"   : 50,
+    "expiration" : "03/10/1998",
+    "store"      : 1
+}
+
+
+# get food
+GET https://team-um6.herokuapp.com/food/11/1 HTTP/1.1
+Content-Type: application/json
+
+# change food
+PUT https://team-um6.herokuapp.com/food/11/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name" : "Super Bread"
+}
+
+
+# delete food
+DELETE https://team-um6.herokuapp.com/food/11/1 HTTP/1.1
+Content-Type: application/json
+
+
+# list all foods
+GET https://team-um6.herokuapp.com/foods/1 HTTP/1.1
+Content-Type: application/json
