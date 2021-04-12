@@ -1,0 +1,106 @@
+*{
+    margin:0;
+    padding:0;
+}
+.web{
+    height: 122%;
+    width: 100%;
+    background-image: url(background.png);
+    background-position: fi;
+    background-size: cover;
+    position: absolute;
+   
+    
+}
+.form-box{
+    width: 450px;
+    height: 900px;
+    position: relative;
+    margin: 6% auto;
+    background: #f6faf0;
+    padding: 5px;
+    overflow: hidden;
+    
+}
+.button-box{
+    width: 340px;
+    margin: 20px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+
+}
+.toggle-btn{
+    padding: 10px 30px ;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 170px;
+    height: 100%;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+    border-radius: 30px;
+    transition: .5s;
+}
+.input-group{
+    top: 190px;
+    position: absolute;
+    width: 250px
+    transition: .5s;
+}
+.input-group1{
+    top: 190px;
+    position: absolute;
+    width: 250px
+    transition: .5s;
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0px;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+    
+}
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+#StoreRegistration{
+    left:65px;
+    width: 75%;
+}
+#UserRegistration{
+    left:550px;
+    width: 75%;
+    
+}
+
+#open:before {
+    content:'Open At';
+    margin-right:.6em;
+    color: #636c72;
+    }
+#close:before {
+        content:'Close At';
+        margin-right:.6em;
+        color: #636c72;
+        }

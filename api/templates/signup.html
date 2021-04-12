@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title> Harvest - Registration </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link href="https://fonts.googleapis.com/css?family=Ralway&dispaly=swap" rel="stylesheet"/>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awsome.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">    
+
+  </head>
+  <body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" >
+      <div class="container-fluid">
+        
+  <a class="navbar-brand"><img src="{{ url_for('static', filename='images/other.jpg') }}"> </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Main-navbarMenu">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="Main-nabbarMenu">
+      <ul class="navbar-nav ml-auto">
+  
+   <li class="nav-item">
+          <a href="#" class="nav-link">Store Registration</a>
+     </li>
+             <li class="nav-item">
+                 <a href="/login" class="nav-link">Log In</a>
+             </li>
+  
+             <li class="nav-item">
+              <a href="#" class="nav-link">About</a>
+         </li>
+  
+  
+  
+          </ul>
+  </div>
+  </nav>    
+      
+      <div class="web">
+          <div class="form-box">
+              <div class="button-box">
+                  <div id="btn"></div>
+                  <!--
+                  <button type="button" class="toggle-btn" onclick="store()"> Store Registration</button>
+                  <button type="button" class="toggle-btn" onclick="user()"> User Registration</button>
+                  -->
+                 
+              </div>
+              <form id = "StoreRegistration"  class= "input-group">
+                  <input type="text" name= "name" class="input-field" placeholder = "Store Name" required>
+                  <input type="text" name = "phone"class="input-field" placeholder = "Phone Number" required>
+                  <input type="text" name="street" class="input-field" placeholder = "Street Address" required>
+                  <input type="text" name = "city" class="input-field" placeholder = "City" required>
+                  <input type="text" name = "state" class="input-field" placeholder = "State" required>
+                  <input type="number" name= "zipcode" class="input-field" placeholder = "Zipcode" required>
+                  <input type="time" step=1 name ="open" id="open" class="input-field" placeholder = "Open at (HH:MM:SS)" required>
+                  <input type="time" step=1 name="close" id="close" class="input-field" placeholder = "Close at(HH:MM:SS)" required>
+                  <input type="email" name="user" class="input-field" placeholder = "User Email Address" required>
+                  <input type="password" name="password" class="input-field" placeholder = "Password" required>
+                  
+                  <button type="submit" class="submit-btn">Register Store</button>
+              </form>
+              <!--
+              <form id = "UserRegistration" class= "input-group1">
+                <input type="email" name="email" class="input-field" placeholder = "Email Address" required>
+                <input type="password" name = "password" class="input-field" placeholder = "Password" required>
+                <input type="number" name="store" class="input-field" placeholder = "Store ID" required>
+                <button type="submit" class="submit-btn">Register User</button>
+              </form>
+              -->
+            
+          </div>
+      </div>
+
+  <script src="{{ url_for('static', filename='js/signup.js') }}">   </script>
+
+
+
+  </body>
+</html>

@@ -17,6 +17,12 @@ Content-Type: application/json
     "password" : "harvest"
 }
 
+# user profile
+GET http://localhost:5000/user/profile
+Content-Type: application/json
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTgyNjY3ODYsImlhdCI6MTYxODI2NDk4NiwibmJmIjoxNjE4MjY0OTg2LCJpZGVudGl0eSI6MX0.9nO-5mHj4wJG2_fLs-BGhPZYTqd0yIv5i_dnJrBTEE0
+
+
 
 # get user
 GET http://localhost:5000/user/1/team-um6@gsu.edu HTTP/1.1

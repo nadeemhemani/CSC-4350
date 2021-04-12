@@ -1,6 +1,6 @@
 from flask_restplus import Resource, Api, reqparse
 from models.user import UserModel
-from flask_jwt import jwt_required
+from flask_jwt import jwt_required, current_identity
 
 class User(Resource):
     def post(self):
@@ -85,3 +85,9 @@ class UserList(Resource):
     def get(self, store):
          return { 'users' : [user.json() for user in UserModel.query.filter_by(store_id = store).all()]}
 
+
+class UserProfile(Resource):
+    @jwt_required()
+    def get(self):
+        return current_identity.json()
+        

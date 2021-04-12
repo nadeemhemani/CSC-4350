@@ -6,7 +6,10 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 SQLALCHEMY_ECHO = False
 
 # SQLite
-SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL', 'sqlite:///harvest.db')
+#SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL', 'sqlite:///harvest.db')
+
+# https://stackoverflow.com/questions/66690321/flask-and-heroku-sqlalchemy-exc-nosuchmoduleerror-cant-load-plugin-sqlalchemy
+SQLALCHEMY_DATABASE_URI = os.environ.get('DB_FIX', 'sqlite:///harvest.db')
 # MySQL
 #SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL', 'mysql://php:php@localhost/app')
 

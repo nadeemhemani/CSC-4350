@@ -16,8 +16,8 @@ werkzeug = "==0.16.1"
 requests = "*"
 geocoder = "*"
 geopy = "*"
-psycopg2 = "*"
 mysqlclient = "*"
+psycopg2 = "==2.8.1"
 
 [requires]
 python_version = "3.7"
