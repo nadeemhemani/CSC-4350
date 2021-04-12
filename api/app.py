@@ -20,11 +20,13 @@ from resources.food import FoodImageDownloader
 
 from resources.consumer import Consumer
 
+from resources.landing import Landing
+
 app = Flask(__name__)
 app.config.from_object('config')
 
 CORS(app)
-api = Api(app, version='1.0', title='Harvest App API',  description='Restful API for Haverst Application')
+api = Api(app, version='1.0', title='Harvest App API',  description='Restful API for Haverst Application' , ui=False)
 
 db.init_app(app)
 
@@ -33,6 +35,8 @@ def create_tables():
     db.create_all() 
 
 jwt = JWT(app, authenticate, identity)
+
+api.add_resource(Landing, '/index')
 
 api.add_resource(StoreAPI, '/store')
 api.add_resource(Store, '/store/<string:_id>')
@@ -49,6 +53,8 @@ api.add_resource(FoodImageUploader, '/food/photo/upload')
 api.add_resource(FoodImageDownloader, '/food/photo/download/<string:food_id>')
 
 api.add_resource(Consumer, '/consumer/<string:lat>/<string:lng>/<string:unit>')
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)    

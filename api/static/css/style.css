@@ -1,0 +1,157 @@
+ body{
+     margin: 0;
+     padding: 0;
+
+}
+.section{
+ padding: 0 100px;
+ background-image: url("new food.jpg");
+ height: 100vh;
+ display: flex;
+align-items: center;
+flex-direction: row-reverse;
+}
+
+.box{
+    position: relative;
+    max-width: 600px;
+    padding: 50px;
+    background:rgba(255,255,255,.2);
+    box-shadow: 0 50px 15px rgba(0,0,0,.5);
+}
+.box h1{
+  margin: 0 0 20px;
+  padding: 0;
+  font-size: 48px;
+  text-transform: uppercase;
+
+}
+.box p{
+    font-style: normal;
+    color: rgb(15, 12, 4);
+}
+
+
+
+
+  .navbar{
+    padding: .8rem;
+   }
+
+.navbar-nav li{
+    padding-right: 20px;
+}
+
+
+.navbar-link{
+    font: size 1.1em !important;
+
+
+}
+.navbar-link :hover{
+
+        font-weight: 600;
+        border-bottom: 1px solid #fff;
+        margin-bottom: -1px;
+}
+
+
+
+
+.carousel-inner img{
+    width: 100%;
+    height: 20%;
+
+}
+
+.carousel-caption{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel-caption h1{
+    font-size: 300%;
+    color: rgb(15, 12, 4);
+}
+
+.carousel-caption h3{
+    font-size: 100%;
+      
+    color: rgb(15, 12, 4);
+}
+
+
+
+
+
+.btn-primary{
+    font-style: normal;
+    color: black;
+    background-color: rgb(89, 188, 206);
+    border:1 px solid rgb(80, 200, 221);
+}
+
+.btn-primary:hover{
+    background-color: rgb(195, 20, 78);
+    border: 1px solid rgb(195, 20, 78);
+}
+
+.padding{
+    padding-bottom: 2rem;
+}
+
+.welcome{
+    width: 100%;
+    margin:0 auto;
+    padding-top: 2rem;
+    background-image: url("food3.jpg");
+
+}
+
+.welcome hr{
+    border-top: 2px solid #b4b4b4;
+    width: 95%;
+    margin-top: .3rem;
+    margin-bottom: 1rem;
+
+}
+
+footer{
+    background-color: rgb(149, 184, 185);
+    color: rgb(243, 246, 246);
+    padding-top: 2rem;
+
+}
+
+.hr-light{
+    border-top: 1px solid #d5d5d5;
+    width: 75%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+
+}
+
+@media(max-width: 768px){
+    .carousel-caption{
+      top: 45%;
+    
+    }
+    .carousel-caption h1{
+        font-size: 350%;
+        
+    }
+    
+    .carousel-caption h3{
+        font-size: 140%;
+        font-weight: 400;
+        padding-bottom: .2rem;
+
+    }
+    .carousel-caption  .btn{
+        font-size: 95%;
+        padding: 8px 14px;
+    }
+
+
+
+}
