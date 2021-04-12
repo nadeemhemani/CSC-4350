@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title> Harvest - Registration </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="signup.css">
+
+  </head>
+  <body>
+      
+      <div class="web">
+          <div class="form-box">
+            <center><img src="HarvestLogo.png" alt="Harvest_Logo" width=150px height=120px></center>
+              <div class="button-box">
+                  <div id="btn"></div>
+                  <button type="button" class="toggle-btn" onclick="store()"> Store Registration</button>
+                  <button type="button" class="toggle-btn" onclick="user()"> User Registration</button>
+                 
+              </div>
+              <form id = "StoreRegistration"  class= "input-group">
+                  <input type="text" name= "name" class="input-field" placeholder = "Store Name" required>
+                  <input type="text" name = "phone"class="input-field" placeholder = "Phone Number" required>
+                  <input type="text" name="street" class="input-field" placeholder = "Street Address" required>
+                  <input type="text" name = "city" class="input-field" placeholder = "City" required>
+                  <input type="text" name = "state" class="input-field" placeholder = "State" required>
+                  <input type="number" name= "zipcode" class="input-field" placeholder = "Zipcode" required>
+                  <input type="time" step=1 name ="open" id="open" class="input-field" placeholder = "Open at (HH:MM:SS)" required>
+                  <input type="time" step=1 name="close" id="close" class="input-field" placeholder = "Close at(HH:MM:SS)" required>
+                 <!-- <input type="email" name="user" class="input-field" placeholder = "User Email Address" required>
+                  <input type="pass" name class="input-field" placeholder = "Password" required> -->
+                  
+                  <button type="submit" class="submit-btn"  > Register Store</button>
+              </form>
+              <form id = "UserRegistration" class= "input-group1">
+                <input type="email" name="email" class="input-field" placeholder = "Email Address" required>
+                <input type="password" name = "password" class="input-field" placeholder = "Password" required>
+                <input type="number" name="store" class="input-field" placeholder = "Store ID" required>
+                <button type="submit" class="submit-btn" > Register User</button>
+              </form>
+            
+          </div>
+      </div>
+  <script src = "signup.js">
+      var x = document.getElementById("StoreRegistration");
+      var y = document.getElementById("UserRegistration");
+      var z = document.getElementById("btn");
+     
+
+      function user(){
+          x.style.left = "-2000px";
+          y.style.left = "65px";
+          z.style.left = "170px";
+         
+        }
+        function store(){
+          x.style.left = "65px";
+          y.style.left = "490px";
+          z.style.left = "0px";
+          
+        }
+        
+        
+      /* function showInput() {
+        document.getElementById('display').innerHTML = 
+                    document.getElementById("user_input").value;
+    }
+        function storesubmitbutton(){
+          alert("Store registration Successful");
+        }
+        function usersubmitbutton(){
+          alert("User registration Successful");
+        }
+        */
+        
+</script>
+
+  </body>
+</html>
