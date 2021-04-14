@@ -26,7 +26,7 @@ form.addEventListener('submit', e => {
     .then(data => {
         let payload = {
             password: form.password.value,
-            email: form.user.value,
+            email: form.email.value,
             store : data.record.id        
         }
 
