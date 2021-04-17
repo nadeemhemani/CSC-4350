@@ -1,12 +1,17 @@
 package com.example.harvestprototype;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Store {
 
     private String name, distance, address, phone, hours, items, latitude, longitude;
+    private List<Object> foods = new ArrayList<>();
 
     public Store() {
 
     }
+    // need to add list to constructor
     public Store(String name, String distance, String address, String phone, String hours, String items, String latitude, String longitude) {
         this.name = name;
         this.distance = distance;
@@ -81,4 +86,8 @@ public class Store {
     public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
+
+    // references food class
+    public void setFoods(List<Object> foods) {}
+
 }

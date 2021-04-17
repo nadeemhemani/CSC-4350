@@ -60,7 +60,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     // Volley:
     private RequestQueue queue;
     List<Store> stores = new ArrayList<>();
-    List<Store> allStores = new ArrayList<>();
 
     // RecyclerView:
     RecyclerView recyclerView;
@@ -85,7 +84,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
         String urlBeginning = "https://team-um6.herokuapp.com/consumer/";
         String urlCoordinates = location.getLatitude() + "/" + location.getLongitude() + "/";
-        String urlMetric = "miles";
+        String urlMetric = "miles"; // user preference
         String url = urlBeginning + urlCoordinates + urlMetric;
 
         String arrayName = "stores";

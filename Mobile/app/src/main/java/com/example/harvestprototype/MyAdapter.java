@@ -22,6 +22,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
 
+    // might need to be changed
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -30,6 +31,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
 
+    // have to change this
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
@@ -48,6 +50,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
 
+    // have to change this
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView nameText, distanceText, addressText, phoneText, hoursText, itemsText;
