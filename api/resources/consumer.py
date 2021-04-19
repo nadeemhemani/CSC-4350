@@ -26,6 +26,8 @@ class Consumer(Resource):
 
 
                 stores[s.id] = {
+                    'id'              : s.id,
+                    'foodId'          : f.id,
                     'name'            : s.name, 
                     'phone'           : s.phone,
                     'street'          : s.street,
