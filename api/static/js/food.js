@@ -1,5 +1,4 @@
-const body= document.body
-const card= document.card
+const form = document.querySelector('#FoodList')
 
 
 const sendHTTPRequest = (method, url, dta) => {
