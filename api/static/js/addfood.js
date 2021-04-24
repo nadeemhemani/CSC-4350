@@ -8,11 +8,12 @@ form.addEventListener('submit', e => {
         name : form.name.value,
         quantity : form.quantity.value,
         calories : form.calories.value,
-        expiration : form.expiration.value,
+        expiration : new Date(form.expiration.value).toLocaleDateString(),
         //get store id ?
         store : sessionStorage.getItem('storeid')
 
     }
+    console.log(payload)
 
 
     fetch('/food', {
@@ -24,8 +25,8 @@ form.addEventListener('submit', e => {
     })
     .then(response => response.json())
     .then(data => {
-        alert ('Food creation completed');
-        window.location.replace('/add_food');
+        
+        window.location.replace('/food_management');
     })
     .catch(err => console.log(err));
 })
