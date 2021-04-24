@@ -1,14 +1,14 @@
-const form = document.querySelector(#AddFood)
+const form = document.querySelector('.AddFood')
 
 form.addEventListener('submit', e => {
 
     e.preventDefault();
 
     let payload = {
-        name : from.name.value,
-        quantity : from.quantity.value,
-        calories : from.calories.value,
-        expiration : from.expiration.value,
+        name : form.name.value,
+        quantity : form.quantity.value,
+        calories : form.calories.value,
+        expiration : form.expiration.value,
         //get store id ?
         store : data.record.id 
 
@@ -16,7 +16,7 @@ form.addEventListener('submit', e => {
 
 
     fetch('/food', {
-        method 'POST',
+        method: 'POST',
         body: JSON.stringify(payload),
         headers: {
             "Content-Type" : " application/json",
@@ -24,9 +24,11 @@ form.addEventListener('submit', e => {
     })
     .then(response => response.json())
     .then(data => {
-        alert ('Food creation completed.');
+        alert ('Food creation completed for' + store);
         window.location.replace('/');
     })
-    /catch
-
+    .catch(err => console.log(err));
 })
+
+var x = document.getElementById("AddFood");
+      var y = document.getElementById("btn");

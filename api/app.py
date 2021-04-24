@@ -26,6 +26,7 @@ from resources.home import Home
 from resources.login import Login
 from resources.signup import Signup
 from resources.food_management import FoodManagement
+from resources.add_food import AddFood
 
 app = Flask(__name__)
 app.config.from_object('config')
@@ -68,6 +69,7 @@ api.add_resource(Home, '/home')
 api.add_resource(Login, '/login')
 api.add_resource(Signup, '/signup')
 api.add_resource(FoodManagement, '/food_management')
+api.add_resource(AddFood, '/add_food')
 
 # https://github.com/noirbizarre/flask-restplus/issues/712
 #api.add_resource(Landing, '/')
