@@ -1,4 +1,4 @@
-const form = document.querySelector('.AddFood');
+const form = document.querySelector('#AddFood');
 
 form.addEventListener('submit', e => {
 
@@ -10,7 +10,7 @@ form.addEventListener('submit', e => {
         calories : form.calories.value,
         expiration : form.expiration.value,
         //get store id ?
-        store : userProfile.store
+        store : sessionStorage.getItem('storeid')
 
     }
 
@@ -24,11 +24,11 @@ form.addEventListener('submit', e => {
     })
     .then(response => response.json())
     .then(data => {
-        alert ('Food creation completed for' + store);
-        window.location.replace('/');
+        alert ('Food creation completed');
+        window.location.replace('/add_food');
     })
     .catch(err => console.log(err));
-}).catch(err => console.log(err));
+})
 
 var x = document.getElementById("AddFood");
       var y = document.getElementById("btn");
