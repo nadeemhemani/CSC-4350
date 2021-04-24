@@ -104,7 +104,7 @@ flex-direction: row-reverse;
     width: 100%;
     margin:0 auto;
     padding-top: 2rem;
-    background-image: url("food3.jpg");
+    background-image: url("{{ url_for('static', filename='images/other.jpg') }}");
 
 }
 

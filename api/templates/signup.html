@@ -19,7 +19,7 @@
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <div class="container-fluid">
-          <a class="navbar-brand"><img src="images/logo.png" height="45" class="d-inline-block align-top" alt=""></a>
+        <a class="navbar-brand"><img src="{{ url_for('static', filename='images/other.jpg') }}"> </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Main-navbarMenu" aria-controls="Main-navbarMenu" aria-expanded="false" aria-label="Toggle navigation"> 
               <span class="navbar-toggler-icon"></span>
           </button>
@@ -35,7 +35,7 @@
                   </li>
 
                   <li class="nav-item">
-                      <a href="#" class="nav-link">About</a>
+                      <a href="/index" class="nav-link">About</a>
                   </li>
               </ul>
           </div>

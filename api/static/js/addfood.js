@@ -1,4 +1,4 @@
-const form = document.querySelector('.AddFood')
+const form = document.querySelector('.AddFood');
 
 form.addEventListener('submit', e => {
 
@@ -10,7 +10,7 @@ form.addEventListener('submit', e => {
         calories : form.calories.value,
         expiration : form.expiration.value,
         //get store id ?
-        store : data.record.id 
+        store : userProfile.store
 
     }
 
@@ -28,7 +28,7 @@ form.addEventListener('submit', e => {
         window.location.replace('/');
     })
     .catch(err => console.log(err));
-})
+}).catch(err => console.log(err));
 
 var x = document.getElementById("AddFood");
       var y = document.getElementById("btn");
