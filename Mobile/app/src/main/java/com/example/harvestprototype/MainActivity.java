@@ -64,6 +64,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     // RecyclerView:
     RecyclerView recyclerView;
 
+    //only for test
+    List<Food> foodList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,7 +122,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
                 // RecyclerView:
                 recyclerView = findViewById(R.id.RecyclerView);
-                MyAdapter adapter = new MyAdapter(getApplicationContext(), stores);
+                MyAdapter adapter = new MyAdapter(getApplicationContext(), stores, foodList);
                 recyclerView.setAdapter(adapter);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
@@ -128,6 +130,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
                 mapFragment.getMapAsync(MainActivity.this);
 
+                //test code
 
 
                 /*********************************************************************************
@@ -143,6 +146,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
         queue.add(request);
+
+
+        initData();
     }
 
 
@@ -221,6 +227,13 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
         return minDist;
     }
+//new code(test)
+private void initData() {
+    foodList = new ArrayList<>();
+    foodList.add(new Food("Bread"));
+
+}
+
 
 
 }
