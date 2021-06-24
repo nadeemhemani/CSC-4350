@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#C9A47E"
+    android:backgroundTint="@color/splash_screen_background"
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/map_card"
         android:layout_width="match_parent"
         android:layout_height="377dp"
-        android:backgroundTint="#EDD59F"
+        android:backgroundTint="@color/splash_screen_background"
         tools:ignore="MissingConstraints">
 
         <fragment

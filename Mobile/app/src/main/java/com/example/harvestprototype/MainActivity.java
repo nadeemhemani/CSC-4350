@@ -48,7 +48,15 @@ import java.util.List;
 import afu.org.checkerframework.checker.igj.qual.I;
 
 /**************************************************************************************************
-Final Harvest Prototype For Sprint-2!
+ Final Harvest Prototype For Sprint-2!
+
+
+ 1. have to create adapter in myadapoter
+ 2. have to loop through each store in initdata
+ 3. have to change xml
+
+
+ -- food request isnt working for some reason
  *************************************************************************************************/
 
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback, LocationListener {
@@ -59,6 +67,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     // Volley:
     private RequestQueue queue;
+    private RequestQueue queueFood;
     List<Store> stores = new ArrayList<>();
 
     // RecyclerView:
@@ -83,6 +92,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Get Data:
         queue = Volley.newRequestQueue(this);
+        queueFood =  Volley.newRequestQueue(this);
 
         String urlBeginning = "https://team-um6.herokuapp.com/consumer/";
         String urlCoordinates = location.getLatitude() + "/" + location.getLongitude() + "/";
@@ -114,6 +124,43 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                         store.setLatitude(object.getString("latitude"));
                         store.setLongitude(object.getString("longitude"));
 
+
+                        // food request
+                        String storeid = object.getString("id");
+                        String foodUrl = "https://team-um6.herokuapp.com/foods/" + storeid;
+                        String arrayNameFood = "foods";
+
+                        JsonObjectRequest requestFood = new JsonObjectRequest(Request.Method.GET, foodUrl, null, new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+                                try {
+                                    JSONArray jsonArrayFood = response.getJSONArray(arrayNameFood);
+                                    for (int j = 0; j < jsonArrayFood.length(); j++) {
+                                        Food food = new Food();
+                                        JSONObject objectFood =jsonArrayFood.getJSONObject(j);
+
+                                        food.setName(objectFood.getString("name"));
+                                        food.setQty(objectFood.getString("quantity"));
+                                        food.setCals(objectFood.getString("calories"));
+                                        food.setExp(objectFood.getString("expiration"));
+
+
+                                        store.addFood(food);
+
+                                    }
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+
+                            }
+                        }, new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                error.printStackTrace();
+                            }
+                        });
+                        queueFood.add(requestFood);
+
                         stores.add(store);
                     }
                 } catch (JSONException e) {
@@ -134,7 +181,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
 
                 /*********************************************************************************
-                STOP! Anything that happens "after" receiving data should be called
+                 STOP! Anything that happens "after" receiving data should be called
                  within the onResponse function. Anything after "queue.add(request)"
                  will not execute. (from what i've found)
                  *********************************************************************************/
@@ -227,12 +274,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
         return minDist;
     }
-//new code(test)
-private void initData() {
-    foodList = new ArrayList<>();
-    foodList.add(new Food("Bread"));
+    //new code(test)
+    private void initData() {
+        foodList = new ArrayList<>();
+        foodList.add(new Food("Bread"));
+        foodList.add(new Food("Butter"));
+        foodList.add(new Food("Blackberry Biscuit"));
 
-}
+    }
 
 
 

@@ -5,14 +5,15 @@ import java.util.List;
 
 public class Store {
 
-    private String name, distance, address, phone, hours, items, latitude, longitude;
-    private List<Object> foods = new ArrayList<>();
+    private String name, distance, address, phone, hours, items, latitude, longitude, id;
+    private List<Food> foods = new ArrayList<>();
+    private List<String> foodNames = new ArrayList<>();
 
     public Store() {
 
     }
     // need to add list to constructor
-    public Store(String name, String distance, String address, String phone, String hours, String items, String latitude, String longitude) {
+    public Store(String name, String distance, String address, String phone, String hours, String items, String latitude, String longitude, String id) {
         this.name = name;
         this.distance = distance;
         this.address = address;
@@ -21,6 +22,7 @@ public class Store {
         this.items = items;
         this.latitude = latitude;
         this.longitude = longitude;
+        this.id = id;
     }
 
     public String getName() {
@@ -87,7 +89,25 @@ public class Store {
         this.longitude = longitude;
     }
 
-    // references food class
-    public void setFoods(List<Object> foods) {}
+    public void setFoods(List<Food> foods) {
+        this.foods = foods;
+    }
+
+    public void addFood(Food food) {
+        foods.add(food);
+    }
+
+    public List<Food> getFoods() {
+        return foods;
+    }
+
+    public List<String> getFoodNames() {
+        for (Food food : foods) {
+            foodNames.add(food.getName());
+        }
+        return  foodNames;
+    }
+
+    public String getId(){return id;}
 
 }

@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Harvest (Prototype)"
+rootProject.name = "Harvest"

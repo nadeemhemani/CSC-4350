@@ -1,9 +1,12 @@
 package com.example.harvestprototype;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,6 +20,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     LayoutInflater inflater;
     List<Store> stores;
     List<Food> foods;
+    Context contex;
+    Activity activity;
     public MyAdapter(Context context, List<Store> stores, List<Food> foods) {
         this.inflater = LayoutInflater.from(context);
         this.stores = stores;
@@ -45,7 +50,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.itemsText.setText(stores.get(position).getItems());
         //test code
 
-        Food food = foods.get(position);
+        // ArrayAdapter<Food> a = new ArrayAdapter<Food>(activity, R.layout.store_row, foods);
+        // holder.foodText.setAdapter(a);
+
         holder.foodText.setText(foods.get(position).getName());
         boolean isExpanded = foods.get(position).isExpanded();
         holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
